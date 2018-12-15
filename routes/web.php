@@ -11,6 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'PagesController@index') ;
+Route::get('/about', 'PagesController@about') ;
+Route::get('/services', 'PagesController@services') ;
+/*
+Route::get('/hello', function(){
+    return '<h1>Hello World</h1>';
 });
+
+Route::get('/about', function(){
+    return view('pages.about');
+});
+
+// Dynamic route
+Route::get('/users/{id}/{name}', function($id, $name){
+    return 'This is user ' . $name . ' with an ID of ' . $id;
+});
+*/
