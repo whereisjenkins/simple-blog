@@ -27,4 +27,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+    public function posts(){
+        // User can have many posts
+        return $this->hasMany('App\Post');
+    }
 }
